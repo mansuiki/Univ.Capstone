@@ -32,6 +32,7 @@ const int BB    = -6000;
 const int BBB   = -7500;
 
 int state[3];
+int vibeMode = 0;
 long int ti;
 long int cpt = 0;
 volatile bool intFlag = false;
@@ -85,6 +86,9 @@ void callback()
 }
 
 void loop() {
+  vibeMode = Serial.Read();
+  vibe();
+  
   while (!intFlag);
   intFlag = false;
 
@@ -145,6 +149,37 @@ void loop() {
   delay(100);
 }
 
+void vibe(int vibeMode) {
+  switch (vibeMode) {
+    case 0:     //(0,0)단계
+      analogWrite(vibe1, 0);
+      analogWrite(vibe2, 0);
+    case 1:     //(0,1)단계
+      analogWrite(vibe1, 0);
+      analogWrite(vibe2, 170);
+    case 2:     //(0,2)단계
+      analogWrite(vibe1, 0);
+      analogWrite(vibe2, 255);
+    case 3:     //(1,0)단계
+      analogWrite(vibe1, 170);
+      analogWrite(vibe2, 0);
+    case 4:     //(1,1)단계
+      analogWrite(vibe1, 170);
+      analogWrite(vibe2, 170);
+    case 5:     //(1,2)단계
+      analogWrite(vibe1, 170);
+      analogWrite(vibe2, 255);
+    case 6:     //(2,0)단계
+      analogWrite(vibe1, 255);
+      analogWrite(vibe2, 0);
+    case 7:     //(2,1)단계
+      analogWrite(vibe1, 255);
+      analogWrite(vibe2, 170);
+    case 8:     //(2,2)단계
+      analogWrite(vibe1, 255);
+      analogWrite(vibe2, 170);
+  }
+}
 int Gyro(int16_t ax, int16_t ay, int16_t az) {
   //state[손등방향 상0/하1, 전0~후6, 좌0~우6]
   //===========극좌표계 양의 축 기준 골무 방향=============
