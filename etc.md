@@ -42,3 +42,4 @@
 > 예산 272,520 / 사용액 : 269,200 / 잔액 : 3,320
 
 > # [구글 스프레드시트](https://docs.google.com/spreadsheets/d/1rHOdNbFXkqYjk74Dlw1d8c5Au2VQbruWy0pjtlw9Ts8/edit#gid=0)
+> ## [전시 판넬 내용](https://docs.google.com/document/d/1FlZvRDMCm3Bd7hVMB6zY9A2_nxm5nnB4CFEvxhJGi9M/edit)

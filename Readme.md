@@ -1,4 +1,9 @@
 # Univ.Capstone Contest
 
-## [전시 판넬 내용](https://docs.google.com/document/d/1FlZvRDMCm3Bd7hVMB6zY9A2_nxm5nnB4CFEvxhJGi9M/edit)
+|조원|소속|
+|김민호|전자정보공학부|
+|홍준기|전자정보공학부|
+|김경택|소프트웨어학부|
+|김현우|소프트웨어학부|
 
+> 결과 : 장려상
